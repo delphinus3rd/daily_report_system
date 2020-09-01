@@ -39,9 +39,9 @@ public class PropertiesListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent arg0)  {
          ServletContext context = arg0.getServletContext();
 
-         String path =context.getRealPath("/META-INF/application.properties");
+         String path = context.getRealPath("/META-INF/application.properties");
          try {
-             InputStream is =new FileInputStream(path);
+             InputStream is = new FileInputStream(path);
              Properties properties = new Properties();
              properties.load(is);
              is.close();
